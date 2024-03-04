@@ -6,7 +6,19 @@ This is a docker dev container for my debugging of gfortran on an Apple silicon 
 
 I don't use Visual Studio or VSCode. Most of my work is done on my host and I only need to fire this up if I need to breakpoint debug. Use a bind volume to link the container to your source directory or project, rebuild your code and modules, and run with gdb.
 
-You can safely edit the code from the container, but I only install a minimal Vim. Do the heavy editing on your host.
+You can safely edit the code from the container, but I only install a minimal Vim (as vi). Do the heavy editing on your host.
+
+### Build the docker image:
+
+```
+docker build --rm -f Dockerfile -t gfortran-gdb .
+```
+
+### Run the image:
+
+```
+docker run --rm -v <source-code-root>:<mounted-as> -it gfortran-gdb
+```
 
 ## AUTHORSHIP, LICENSING, AND COPYRIGHT
 

@@ -1,1 +1,1 @@
-docker build --rm -f Dockerfile -t gfortran-gdb
+docker build --rm -f Dockerfile -t gfortran-gdb .

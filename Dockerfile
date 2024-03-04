@@ -35,7 +35,7 @@ WORKDIR /home/programmer
 
 # install what we need for gfortran debugging and minimal editing.
 RUN sudo apt-get install -yq git curl && \
-    sudo apt-get install -no-install-recomends -yq vim-tiny make cmake gfortran gdb && \
+    sudo apt-get install --no-install-recommends -yq vim-tiny make cmake gfortran gdb && \
     sudo apt-get clean -q
 
 # use the following if needed to get parts needed for curcic's text:
